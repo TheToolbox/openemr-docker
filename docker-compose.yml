@@ -1,0 +1,20 @@
+version: '3'
+services:
+  openemr-docker-alpine:
+    build: .
+    ports:
+    - 88:80
+    volumes:
+    - logvolume01:/var/log
+    - sitevolume:/var/www/localhost/htdocs/openemr/sites/default
+    links:
+    - mysql
+  mysql:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: openemr
+volumes:
+  db: {}
+  logvolume01: {}
+  sitevolume: {}
