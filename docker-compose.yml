@@ -1,7 +1,7 @@
 version: '3'
 services:
   openemr-docker-alpine:
-    build: .
+    build: openemr/
     ports:
     - 88:80
     volumes:
