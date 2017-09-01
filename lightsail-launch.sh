@@ -1,5 +1,7 @@
 #!/bin/bash
 
+exec > /tmp/lightsail-launch.log 2>&1
+
 cd /root
 
 apt-get update
