@@ -3,7 +3,7 @@ services:
   openemr-docker-alpine:
     build: openemr/
     ports:
-    - 88:80
+    - 80:80
     volumes:
     - logvolume01:/var/log
     - sitevolume:/var/www/localhost/htdocs/openemr/sites/default
