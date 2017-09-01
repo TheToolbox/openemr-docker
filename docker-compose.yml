@@ -10,6 +10,7 @@ services:
     links:
     - mysql
   mysql:
+    command: ['mysqld', '--character-set-server=utf8']
     image: mysql
     environment:
       MYSQL_ROOT_PASSWORD: root
